@@ -1,4 +1,45 @@
 /* FONTS  */
+@font-face {
+    font-family: "DM Sans";
+    src: url("../fonts/DMSans-Medium.woff2") format("woff2"),
+        url("../fonts/DMSans-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+        url("../fonts/Montserrat-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url("../fonts/DMSans-Regular.woff2") format("woff2"),
+        url("../fonts/DMSans-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --accent-font: "DM Sans", "Montserrat", "Arial", sans-serif;
+    --font-family: "Montserrat", "Arial", sans-serif;
+    --green: #154444;
+    --accent-color: #244D4D;
+    --color: #444444;
+    --heading-color: #242424;
+    --text-color: #383738;
+    --color-ops: #919090;
+    --color-opc: #808080;
+    ;
+
+}
+
 
 
 /* GLOBAL  */
@@ -20,9 +61,10 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    font-family: var(--accent-font);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
     background-color: #fff;
     color: #222;
 }
@@ -30,6 +72,10 @@ body {
 img {
     max-width: 100%;
     height: auto;
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -67,7 +113,7 @@ select:-webkit-autofill:focus {
     margin: -1px;
     border: 0;
     padding: 0;
-    clip: rect(0 0 0 0 );
+    clip: rect(0 0 0 0);
     overflow: hidden;
 }
 
@@ -75,11 +121,22 @@ select:-webkit-autofill:focus {
 /* CONTAINER  */
 .container {
     width: 100%;
-    max-width: 1160px;
+    max-width: 1260px;
     padding-left: 30px;
     padding-right: 30px;
     margin-right: auto;
     margin-left: auto;
+}
+
+
+/* BUTTON  */
+.btn {
+    padding: 15px 28px;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: var(--green);
 }
 
 
@@ -89,12 +146,240 @@ select:-webkit-autofill:focus {
 }
 
 
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) { 
-
+/* HEADER  */
+.site-header {
+    padding-top: 45px;
+    padding-bottom: 30px;
 }
+
+.site-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* SITENAV  */
+.sitenav-list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sitenav-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.sitenav-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #161616;
+}
+
+.img-wrapper {
+    display: flex;
+}
+
+.img-search {
+    width: 21px;
+    height: 21px;
+    object-fit: cover;
+    margin-right: 32px;
+}
+
+.img-menu {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+}
+
+
+/* HERO  */
+.hero {
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+.hero-container {
+    display: flex;
+}
+
+.hero-img {
+    width: 410px;
+    height: 560px;
+    object-fit: contain;
+}
+
+.hero-content {
+    padding: 100px;
+    background-color: var(--green);
+    color: #fff;
+}
+
+.hero-heading {
+    font-family: var(--font-family);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 68px;
+}
+
+.hero-text {
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-family: var(--accent-font);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+
+/* PROMO  */
+.promo {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.promo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.promo-heading {
+    margin-top: 0;
+    margin-bottom: 47px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.img-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.promo-link:not(:last-child) {
+    margin-right: 100px;
+}
+
+.promo-img {
+    object-fit: cover;
+}
+
+
+/* ABOUT  */
+.about {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.about-container {
+    display: flex;
+}
+
+.about-img-big {
+    width: 596px;
+    height: 577px;
+    margin-right: 100px;
+    box-shadow: 30px 30px 5px 0px #dee4E2;
+    ;
+}
+
+.about-content {
+    padding-top: 50px;
+}
+
+.about-heading {
+    font-family: var(--font-family);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: var(--accent-color);
+}
+
+.about-text {
+    font-family: var(--accent-font);
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--color);
+}
+
+.about-wrap {
+    display: flex;
+    align-items: start;
+    margin-bottom: 30px;
+}
+
+.about-img {
+    margin-right: 32px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-family: var(--font-family);
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--accent-color);
+}
+
+.card-info {
+    font-family: var(--accent-font);
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--text-color);
+}
+
+
+/* FOOTER  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {}
