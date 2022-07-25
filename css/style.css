@@ -382,6 +382,11 @@ select:-webkit-autofill:focus {
     color: #fff;
 }
 
+.site-footer *:focus {
+    outline: 2px dashed #fff;
+    outline-offset: 3px;
+}
+
 
 /* FOOTER-TOP  */
 .footer-top {
