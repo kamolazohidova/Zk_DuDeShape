@@ -487,6 +487,10 @@ select:-webkit-autofill:focus {
     color: #fff;
 }
 
+.footer-link:hover {
+    color: rgba(198, 207, 94, 0.99);
+}
+
 
 /* SUBSCRIBE  */
 .subscribe-wrap {
@@ -514,6 +518,13 @@ select:-webkit-autofill:focus {
     padding: 14px 22px;
 }
 
+.subscribe-input::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
 
 /* FOOTER-BOTTOM  */
 .footer-bottom {
@@ -526,6 +537,25 @@ hr {
     border: 0;
     height: 2px;
     background-color: #407980;
+}
+
+.input {
+    padding: 14px 22px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.input-img {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+}
+
+.inputcha {
+    display: inline-block;
+    border: none;
+    width: 180px;
 }
 
 
